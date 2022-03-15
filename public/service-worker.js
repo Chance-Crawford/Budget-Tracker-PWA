@@ -1,6 +1,13 @@
 const FILES_TO_CACHE = [
-    "./index.html",
-    "./css/styles.css"
+    // since index.html is in the same folder as this service worker file,
+    // sometimes there has to be a / separately from it so that the offline caching
+    // can work correctly.
+    "/",
+    "index.html",
+    "./css/styles.css",
+    "./js/index.js",
+    "./js/idb.js",
+    "../routes/api.js"
 ];  
 
 const APP_PREFIX = 'BudgetTracker-';     
